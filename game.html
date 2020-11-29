@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:locale" content="en_GB">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="author" href="https://crlf.site/author/">
+  <meta name="author" content="Cristi Constantin">
+  <meta name="publisher" content="Cristi Constantin">
+  <title>🦋 game</title>
+  <style>
+    /* Inter font: https://rsms.me/inter/ */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("fonts/Inter-Medium.woff2") format("woff2");
+    }
+    /* MuseoModerno font: https://github.com/Omnibus-Type/MuseoModerno */
+    @font-face {
+      font-family: 'MuseoModerno';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("fonts/MuseoModerno-Medium.woff2") format("woff2");
+    } html {
+      height: 99.95%;
+      margin: 0; padding: 0;
+    } body {
+      background: #b7ba9d;
+      font-family: 'Inter', sans-serif;
+      height: 99.95%;
+      margin: 0; padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "a b"
+        "c d";
+    } canvas, h3 {
+      font-family: 'MuseoModerno', monospace;
+    } h3 {
+      margin: 0 0 5px 0;
+    } #game {
+      grid-area: a;
+      padding: 0 0 3px 3px;
+    } #score {
+      grid-area: b;
+      padding: 0 0 3px 3px;
+    } #logs {
+      grid-area: c;
+      overflow-y: scroll;
+      padding: 0 0 3px 3px;
+      border-right: 1px solid #999;
+    } #help {
+      grid-area: d;
+      position: relative;
+      padding: 0 0 3px 3px;
+      border-top: 1px solid #999;
+    } #copyright {
+      position:absolute;
+      bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="game"></div>
+  <div id="score">
+    <h3>Butterflies</h3>
+    <br/>
+  </div>
+  <div id="logs"></div>
+  <div id="help">
+    <h3>A Chasing Butterflies Game</h3><br/>
+    <strong>Movement</strong><br/>
+    <ul>
+      <li>w,a,s,d keys</li>
+      <li>arrow keys</li>
+    </ul>
+    <strong>Waiting</strong><br/>
+    <ul>
+      <li>space key</li>
+    </ul>
+    <footer id="copyright">(C) Cristi Constantin 2020</footer>
+  </div>
+  <script src="dist/game.js"></script>
+  <noscript><img src="https://stat.crlf.site/ingress/35ebb431-473a-4345-beb8-8feac30f031c/pixel.gif"></noscript>
+  <script src="https://stat.crlf.site/ingress/35ebb431-473a-4345-beb8-8feac30f031c/script.js" defer></script>
+</body>
+</html>
